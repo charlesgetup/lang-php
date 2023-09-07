@@ -250,9 +250,9 @@ const globals: readonly Completion[] = [
 ].map(n => ({label: n, type: "function"})))
 
 export const snippets: readonly Completion[] = [
-  snip("function ${name}(${params}):\n\t${}", {
-    label: "def",
-    detail: "function",
+  snip("function ${name}(${params}) {\n\t${}\n}", {
+    label: "function",
+    detail: "definition",
     type: "keyword"
   }),
   snip("for ($${index} = 0; $${index} < ${bound}; $${index}++) {\n\t${}\n}", {
@@ -290,7 +290,7 @@ export const snippets: readonly Completion[] = [
     detail: "/ else block",
     type: "keyword"
   }),
-  snip("class ${name} {\n\tconstructor(${params}) {\n\t\t${}\n\t}\n}", {
+  snip("class ${name} {\n\t${}\n}", {
     label: "class",
     detail: "definition",
     type: "keyword"

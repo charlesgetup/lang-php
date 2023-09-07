@@ -61,6 +61,8 @@ export function php(config: {
     support.push(htmlSupport.support)
     base = htmlSupport.language
   }
+  support.push(phpLanguage.data.of({autocomplete: localCompletionSource}))
+  support.push(phpLanguage.data.of({autocomplete: globalCompletion}))
   return new LanguageSupport(phpLanguage.configure({
     wrap: base && parseMixed(node => {
       if (!node.type.isTop) return null
