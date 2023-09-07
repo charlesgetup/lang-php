@@ -3,6 +3,8 @@ import {parseMixed} from "@lezer/common"
 import {html} from "@codemirror/lang-html"
 import {indentNodeProp, continuedIndent, delimitedIndent, foldNodeProp, foldInside,
         Language, LRLanguage, LanguageSupport} from "@codemirror/language"
+import {globalCompletion, localCompletionSource} from "./complete"
+export {globalCompletion, localCompletionSource}
 
 /// A language provider based on the [Lezer PHP
 /// parser](https://github.com/lezer-parser/php), extended with
